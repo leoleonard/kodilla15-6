@@ -99,5 +99,10 @@ var stopButton = document.getElementById('stop');
 stopButton.addEventListener('click', function () {
     return stopwatch.stop();
 });
+// dodatkowe zadania
+var resetButton = document.getElementById('reset');
+resetButton.addEventListener('click', function () {
+    return stopwatch.start();
+});
 
 var stopwatch = new Stopwatch(document.querySelector('.stopwatch'));

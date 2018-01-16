@@ -56,22 +56,29 @@ class Stopwatch {
         this.running = false;
         clearInterval(this.watch);
     }
+
+
 }
 
-function pad0(value) {
-    let result = value.toString();
+    function pad0(value) {
+        let result = value.toString();
 
-    if (result.length < 2) {
-        result = '0' + result;
+        if (result.length < 2) {
+            result = '0' + result;
+        }
+
+        return result;
     }
-
-    return result;
-}
 
 var startButton = document.getElementById('start');
 startButton.addEventListener('click', () => stopwatch.start());
 var stopButton = document.getElementById('stop');
 stopButton.addEventListener('click', () => stopwatch.stop());
+// dodatkowe zadania
+var resetButton = document.getElementById('reset');
+resetButton.addEventListener('click', () => stopwatch.start());
+
+
 
 const stopwatch = new Stopwatch(
 document.querySelector('.stopwatch'));
