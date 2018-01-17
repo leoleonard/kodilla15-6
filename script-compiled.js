@@ -24,6 +24,17 @@ var Stopwatch = function () {
             };
         }
     }, {
+        key: 'restart',
+        value: function restart() {
+
+            this.times = {
+                minutes: 0,
+                seconds: 0,
+                miliseconds: 0
+            };
+            this.print(this.times);
+        }
+    }, {
         key: 'print',
         value: function print() {
             this.display.innerText = this.format(this.times);
@@ -98,6 +109,11 @@ startButton.addEventListener('click', function () {
 var stopButton = document.getElementById('stop');
 stopButton.addEventListener('click', function () {
     return stopwatch.stop();
+});
+
+var resetButton = document.getElementById('reset');
+resetButton.addEventListener('click', function () {
+    return stopwatch.restart();
 });
 
 var stopwatch = new Stopwatch(document.querySelector('.stopwatch'));
