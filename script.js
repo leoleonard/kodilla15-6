@@ -11,7 +11,7 @@ class Stopwatch {
             minutes: 0,
             seconds: 0,
             miliseconds: 0
-        };
+        }
     }
 
     print() {
@@ -57,7 +57,6 @@ class Stopwatch {
         clearInterval(this.watch);
     }
 
-
 }
 
     function pad0(value) {
@@ -74,10 +73,6 @@ var startButton = document.getElementById('start');
 startButton.addEventListener('click', () => stopwatch.start());
 var stopButton = document.getElementById('stop');
 stopButton.addEventListener('click', () => stopwatch.stop());
-// dodatkowe zadania
-var resetButton = document.getElementById('reset');
-resetButton.addEventListener('click', () => stopwatch.start());
-
 
 
 const stopwatch = new Stopwatch(
